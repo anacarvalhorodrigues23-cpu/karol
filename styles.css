@@ -1,0 +1,80 @@
+/* styles.css — tema sóbrio e legível para o Blog do Agrinho */
+:root{
+  --bg: #f6f7f9;
+  --card: #ffffff;
+  --text: #1f2933;
+  --muted: #6b7280;
+  --accent: #2b6cb0; /* azul discreto */
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.container{
+  max-width:1000px;
+  margin:0 auto;
+  padding:24px;
+}
+.site-header{
+  background:var(--card);
+  border-bottom:1px solid #e6e9ee;
+}
+.logo{
+  margin:0;
+  padding:18px 0;
+  font-size:1.4rem;
+  font-weight:600;
+}
+.main-nav{
+  display:flex;
+  gap:12px;
+  align-items:center;
+}
+.main-nav a{
+  color:var(--muted);
+  text-decoration:none;
+  font-size:0.95rem;
+}
+.hero{
+  padding:36px 0;
+}
+.hero h2{
+  margin:0 0 8px 0;
+  font-size:1.6rem;
+}
+.posts{
+  margin-top:12px;
+}
+.post{
+  background:var(--card);
+  padding:18px;
+  border-radius:6px;
+  border:1px solid #e9edf2;
+  margin-bottom:12px;
+}
+.post-title{margin:0 0 6px 0}
+.post-meta{margin:0 0 8px 0;color:var(--muted);font-size:0.9rem}
+.read-more{color:var(--accent);text-decoration:none;font-weight:600}
+.sidebar{
+  margin-top:18px;
+  padding:12px 0;
+  color:var(--muted);
+}
+.site-footer{
+  margin-top:36px;
+  padding:18px 0;
+  border-top:1px solid #e6e9ee;
+  background:transparent;
+  color:var(--muted);
+}
+
+/* layout responsivo simples */
+@media(min-width:880px){
+  main.container{display:grid;grid-template-columns:2fr 1fr;gap:24px}
+}
